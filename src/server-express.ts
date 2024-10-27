@@ -1,7 +1,7 @@
 import express, { Application } from "express";
 import { PORT as port } from "./config";
-import userRoute from "./routes/user.route";
-import masukMiddleWare from "./middlewares/masuk.middleware";
+import expenseRoute from "./routes/user.route";
+// import masukMiddleWare from "./middlewares/masuk.middleware";
 
 const PORT = Number(port) || 8000;
 
@@ -12,7 +12,7 @@ app.use(express.json());
 // app.use(masukMiddleWare);
 
 // Route
-app.use("/user-management", userRoute);
+app.use("/user-management", expenseRoute);
 
 app.listen(PORT, () => {
   console.log(`Server started on port ${PORT}`);
